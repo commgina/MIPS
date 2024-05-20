@@ -7,11 +7,12 @@ module PC(
 );
 
 
-always @(posedge clk or posedge rst) begin
-    if (rst)
+always @(posedge clk) begin
+    if (rst) begin
         pc <= 32'h00000000;
-    else
+    end else begin
         pc <= next_pc;
+    end
 end
 
 endmodule

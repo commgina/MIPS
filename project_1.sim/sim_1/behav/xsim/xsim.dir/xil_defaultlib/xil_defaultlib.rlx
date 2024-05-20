@@ -1,0 +1,18 @@
+0.7
+2020.2
+Oct 13 2023
+20:21:30
+/home/gina/Facultad/Arqui/MIPS/project_1.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sim_1/new/IF_ID_tb.v,1714761202,verilog,,/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/PC.v,,IF_ID_tb,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sim_1/new/adder_tb.v,1714750481,verilog,,/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/control_unit.v,,adder_tb,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sim_1/new/controlunit_tb.v,1716056372,verilog,,,,control_unit_tb,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sim_1/new/instruction_register_tb.v,1715609494,verilog,,/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/next_pc_logic.v,,instruction_register_tb,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sim_1/new/next_pc_logic_tb.v,1714686596,verilog,,/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/pc_adder.v,,next_pc_logic_tb,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sim_1/new/test_pc_tb.v,1714848012,verilog,,,,testbench,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v,1716055620,verilog,,/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/IF_ID.v,,Fetch,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/IF_ID.v,1714757084,verilog,,/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sim_1/new/IF_ID_tb.v,,IF_ID,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/PC.v,1715348940,verilog,,/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sim_1/new/PC_tb.v,,PC,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/control_unit.v,1715972452,verilog,,/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sim_1/new/controlunit_tb.v,,control_unit,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/instruction_register.v,1715610167,verilog,,/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sim_1/new/instruction_register_tb.v,,instruction_memory,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/next_pc_logic.v,1715011815,verilog,,/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sim_1/new/next_pc_logic_tb.v,,next_pc_logic,,,,,,,,
+/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/pc_adder.v,1714421180,verilog,,/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/register_file.v,,adder,,,,,,,,

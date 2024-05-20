@@ -1,0 +1,12 @@
+Time resolution is 1 ps
+Opcode: 000001, AluOP: 000001, regWrite: 1
+Opcode: 000010, AluOP: 000010, regWrite: 1
+Opcode: 000011, AluOP: 000011, regWrite: 1
+Opcode: 000100, AluOP: 000100, regWrite: 1
+Opcode: 000101, AluOP: 000101, regWrite: 1
+Opcode: 010000, AluOP: 000001, MemRead: 1, AluSrc: 1
+Opcode: 011000, AluOP: 000001, MemWrite: 1, AluSrc: 1
+Opcode: 110000, AluOP: 000010, takeBranch: 1, typeBranch: 0
+Opcode: 111001, AluOP: 000000, takeJump: 1, GPR31: 1
+Opcode: 111010, AluOP: 000000, takeJump: 1, takeJumpR: 1
+$finish called at time : 200 ns : File "/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sim_1/new/controlunit_tb.v" Line 101
