@@ -1,7 +1,5 @@
 
 module Fetch(
-
-
     //inputs comunes
     
     input clk,
@@ -18,7 +16,8 @@ module Fetch(
     //memoria de instrucciones
     input uart_write_enable,
     input [31:0] uart_data_in,
-
+    input debugAddressEnable,
+    input [31:0] debugAddress, //direccion proporcionada por la unidad de debug para escribir la memoria de inst.
     
     output [31:0] instruction,
     output [31:0] pcplus4
@@ -32,7 +31,7 @@ module Fetch(
     
     wire [31:0] pc;
     
-    
+    wire [31:0] address;
     
     reg [31:0] cuatro = 31'h00000004;
     
@@ -42,8 +41,12 @@ module Fetch(
     
     PC program_counter (clk,rst,next_pc,pc);
     
-    instruction_memory instruction_memory(clk,rst,pc,uart_write_enable,uart_data_in,instruction);
-    
     IF_ID latchIFID(clk,rst,instruction,pcplus4);
     
+    mux_addressSource addrSource (
+pc,debugAddress,debugAddressEnable,address);
+    
+    instruction_memory instruction_memory(clk,rst,address,uart_write_enable,uart_data_in,instruction);
+    
+            
 endmodule

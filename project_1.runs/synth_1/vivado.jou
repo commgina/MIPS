@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sun May 12 20:43:57 2024
-# Process ID: 5874
+# Start of session at: Sat Jun 15 14:54:30 2024
+# Process ID: 40542
 # Current directory: /home/gina/Facultad/Arqui/MIPS/project_1.runs/synth_1
 # Command line: vivado -log Fetch.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Fetch.tcl
 # Log file: /home/gina/Facultad/Arqui/MIPS/project_1.runs/synth_1/Fetch.vds
 # Journal file: /home/gina/Facultad/Arqui/MIPS/project_1.runs/synth_1/vivado.jou
-# Running On: uwuntu, OS: Linux, CPU Frequency: 2384.673 MHz, CPU Physical cores: 4, Host memory: 10293 MB
+# Running On: uwuntu, OS: Linux, CPU Frequency: 1317.268 MHz, CPU Physical cores: 4, Host memory: 10293 MB
 #-----------------------------------------------------------
 source Fetch.tcl -notrace

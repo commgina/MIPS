@@ -1,23 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 05/15/2024 07:29:36 PM
-// Design Name: 
-// Module Name: control_unit
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 
 module control_unit(
@@ -28,12 +9,12 @@ module control_unit(
     output reg GPR31,
     output reg takeJump,
     output reg takeJumpR,
-    output reg MemToReg,
+    output reg memToReg,
     output reg regDst,
-    output reg [5:0] AluOP,
-    output reg MemWrite,
-    output reg MemRead,
-    output reg AluSrc
+    output reg [5:0] ALUOp,
+    output reg memWrite,
+    output reg memRead,
+    output reg ALUSrc
 );
 
     always @(*) begin
@@ -45,12 +26,12 @@ module control_unit(
         GPR31 = 0;
         takeJump = 0;
         takeJumpR = 0;
-        MemToReg = 0;
+        memToReg = 0;
         regDst = 0;
-        MemWrite = 0;
-        MemRead = 0;
-        AluSrc = 0;
-        AluOP = 6'b000000; // Valor por defecto
+        memWrite = 0;
+        memRead = 0;
+        ALUSrc = 0;
+        ALUOp = 6'b000000; // Valor por defecto
         
         case(opcode[5:3])
         
@@ -62,11 +43,11 @@ module control_unit(
                 GPR31 = 0;
                 takeJump = 0;
                 takeJumpR = 0;
-                MemToReg = 0;
+                memToReg = 0;
                 regDst = 1;               
-                MemWrite = 0;
-                MemRead = 0;
-                AluSrc = 0;
+                memWrite = 0;
+                memRead = 0;
+                ALUSrc = 0;
             end
             3'b100: begin
                 regWrite = 1;
@@ -75,11 +56,11 @@ module control_unit(
                 GPR31 = 0;
                 takeJump = 0;
                 takeJumpR = 0;
-                MemToReg = 0;
+                memToReg = 0;
                 regDst = 0;
-                MemWrite = 0;
-                MemRead = 0;
-                AluSrc = 1;            
+                memWrite = 0;
+                memRead = 0;
+                ALUSrc = 1;            
             end
             3'b010: begin //load
                 regWrite = 1;
@@ -88,11 +69,11 @@ module control_unit(
                 GPR31 = 0;
                 takeJump = 0;
                 takeJumpR = 0;
-                MemToReg = 1;
+                memToReg = 1;
                 regDst = 0;
-                MemWrite = 0;
-                MemRead = 1;
-                AluSrc = 1;              
+                memWrite = 0;
+                memRead = 1;
+                ALUSrc = 1;              
             end
             3'b011: begin  //store       
                 regWrite = 0;
@@ -101,11 +82,11 @@ module control_unit(
                 GPR31 = 0;
                 takeJump = 0;
                 takeJumpR = 0;
-                MemToReg = 0;
+                memToReg = 0;
                 regDst = 0;
-                MemWrite = 1;
-                MemRead = 0;
-                AluSrc = 1;              
+                memWrite = 1;
+                memRead = 0;
+                ALUSrc = 1;              
             end
             3'b110: begin //branch
                 regWrite = 0;
@@ -119,11 +100,11 @@ module control_unit(
                 GPR31 = 0;
                 takeJump = 0;
                 takeJumpR = 0;
-                MemToReg = 0;
+                memToReg = 0;
                 regDst = 0;
-                MemWrite = 0;
-                MemRead = 0;
-                AluSrc = 0;              
+                memWrite = 0;
+                memRead = 0;
+                ALUSrc = 0;              
             end
             3'b111: begin //jumps    
                 takeJump = 1; //jump
@@ -132,9 +113,9 @@ module control_unit(
                 typeBranch = 0;
                 GPR31 = 0;               
                 takeJumpR = 0;
-                MemToReg = 0;         
-                MemWrite = 0;
-                MemRead = 0;
+                memToReg = 0;         
+                memWrite = 0;
+                memRead = 0;
                     
                 if(opcode == 6'b111001) //jal
                 begin
@@ -155,12 +136,12 @@ module control_unit(
                 GPR31 = 0;
                 takeJump = 0;
                 takeJumpR = 0;
-                MemToReg = 0;
+                memToReg = 0;
                 regDst = 1;               
-                MemWrite = 0;
-                MemRead = 0;
-                AluSrc = 0;
-                AluOP = 3'b000;
+                memWrite = 0;
+                memRead = 0;
+                ALUSrc = 0;
+                ALUOp = 3'b000;
             end           
         endcase
         
@@ -171,25 +152,25 @@ module control_unit(
             
             6'b000001, 6'b010000, 6'b010001, 6'b010010, 6'b010011,
             6'b010100, 6'b010101, 6'b010110, 6'b010111, 6'b011000,
-            6'b100000: AluOP = 6'b000001; // ADD
+            6'b100000: ALUOp = 6'b000001; // ADD
                 
-            6'b000010, 6'b100101, 6'b110000, 6'b110001: AluOP = 6'b000010; //SUB    
+            6'b000010, 6'b100101, 6'b110000, 6'b110001: ALUOp = 6'b000010; //SUB    
                 
-            6'b000011, 6'b100001: AluOP = 6'b000011; // AND
+            6'b000011, 6'b100001: ALUOp = 6'b000011; // AND
             
-            6'b000100, 6'b100010: AluOP = 6'b000100; // OR
+            6'b000100, 6'b100010: ALUOp = 6'b000100; // OR
             
-            6'b000101, 6'b100011: AluOP = 6'b000101; // XOR
+            6'b000101, 6'b100011: ALUOp = 6'b000101; // XOR
             
-            6'b000110: AluOP = 6'b000110; // NOR
+            6'b000110: ALUOp = 6'b000110; // NOR
             
-            6'b001000: AluOP = 6'b000111; // SRL
+            6'b001000: ALUOp = 6'b000111; // SRL
             
-            6'b000111: AluOP = 6'b001000; // SRA
+            6'b000111: ALUOp = 6'b001000; // SRA
             
-            6'b001001: AluOP = 6'b001001; // SLL
-            6'b001010: AluOP = 6'b001010; // SLL16
-            default: AluOP = 6'b000000; // Default 
+            6'b001001: ALUOp = 6'b001001; // SLL
+            6'b001010: ALUOp = 6'b001010; // SLL16
+            default: ALUOp = 6'b000000; // Default 
         
         endcase
         

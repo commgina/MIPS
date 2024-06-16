@@ -12,7 +12,7 @@ WARNING: Default location for XILINX_HLS not found
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source Fetch.tcl -notrace
-create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1310.656 ; gain = 0.027 ; free physical = 3618 ; free virtual = 10201
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1315.660 ; gain = 0.027 ; free physical = 557 ; free virtual = 8854
 Command: read_checkpoint -auto_incremental -incremental /home/gina/Facultad/Arqui/MIPS/project_1.srcs/utils_1/imports/synth_1/Fetch.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/gina/Facultad/Arqui/MIPS/project_1.srcs/utils_1/imports/synth_1/Fetch.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -25,9 +25,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5933
+INFO: [Synth 8-7075] Helper process launched with PID 40621
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2021.410 ; gain = 401.746 ; free physical = 2592 ; free virtual = 9203
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2021.445 ; gain = 404.715 ; free physical = 193 ; free virtual = 7716
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Fetch' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v:2]
 INFO: [Synth 8-6157] synthesizing module 'adder' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/pc_adder.v:2]
@@ -36,28 +36,56 @@ INFO: [Synth 8-6157] synthesizing module 'next_pc_logic' [/home/gina/Facultad/Ar
 INFO: [Synth 8-6155] done synthesizing module 'next_pc_logic' (0#1) [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/next_pc_logic.v:3]
 INFO: [Synth 8-6157] synthesizing module 'PC' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/PC.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'PC' (0#1) [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/PC.v:1]
-INFO: [Synth 8-6157] synthesizing module 'instruction_register' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/instruction_register.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'instruction_register' (0#1) [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/instruction_register.v:4]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v:47]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v:44]
 INFO: [Synth 8-6157] synthesizing module 'IF_ID' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/IF_ID.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'IF_ID' (0#1) [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/IF_ID.v:1]
-WARNING: [Synth 8-7071] port 'o_instruction' of module 'IF_ID' is unconnected for instance 'latchIFID' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v:47]
-WARNING: [Synth 8-7071] port 'o_pc' of module 'IF_ID' is unconnected for instance 'latchIFID' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v:47]
-WARNING: [Synth 8-7023] instance 'latchIFID' of module 'IF_ID' has 6 connections declared, but only 4 given [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v:47]
+WARNING: [Synth 8-7071] port 'o_instruction' of module 'IF_ID' is unconnected for instance 'latchIFID' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v:44]
+WARNING: [Synth 8-7071] port 'o_pc' of module 'IF_ID' is unconnected for instance 'latchIFID' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v:44]
+WARNING: [Synth 8-7023] instance 'latchIFID' of module 'IF_ID' has 6 connections declared, but only 4 given [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v:44]
+INFO: [Synth 8-6157] synthesizing module 'mux_addressSource' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/imports/Downloads/mux_adressSource.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_addressSource' (0#1) [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/imports/Downloads/mux_adressSource.v:1]
+INFO: [Synth 8-6157] synthesizing module 'instruction_memory' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/instruction_register.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_memory' (0#1) [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/instruction_register.v:1]
+WARNING: [Synth 8-689] width (32) of port connection 'instructionDir' does not match port width (8) of module 'instruction_memory' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v:49]
+WARNING: [Synth 8-689] width (32) of port connection 'uart_data_in' does not match port width (8) of module 'instruction_memory' [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v:49]
 INFO: [Synth 8-6155] done synthesizing module 'Fetch' (0#1) [/home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v:2]
+WARNING: [Synth 8-7129] Port uart_data_in[31] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[30] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[29] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[28] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[27] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[26] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[25] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[24] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[23] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[22] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[21] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[20] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[19] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[18] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[17] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[16] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[15] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[14] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[13] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[12] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[11] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[10] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[9] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[8] in module Fetch is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2119.379 ; gain = 499.715 ; free physical = 2485 ; free virtual = 9099
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2270.414 ; gain = 653.684 ; free physical = 200 ; free virtual = 7431
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2137.191 ; gain = 517.527 ; free physical = 2485 ; free virtual = 9099
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2276.352 ; gain = 659.621 ; free physical = 213 ; free virtual = 7444
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2137.191 ; gain = 517.527 ; free physical = 2485 ; free virtual = 9099
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2276.352 ; gain = 659.621 ; free physical = 213 ; free virtual = 7444
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2137.191 ; gain = 0.000 ; free physical = 2485 ; free virtual = 9099
+Netlist sorting complete. Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2276.352 ; gain = 0.000 ; free physical = 205 ; free virtual = 7436
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -92,31 +120,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Fetch_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.973 ; gain = 0.000 ; free physical = 2453 ; free virtual = 9082
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2403.133 ; gain = 0.000 ; free physical = 149 ; free virtual = 7396
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2276.008 ; gain = 0.000 ; free physical = 2453 ; free virtual = 9082
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2403.168 ; gain = 0.000 ; free physical = 149 ; free virtual = 7396
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 2468 ; free virtual = 9097
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2403.168 ; gain = 786.438 ; free physical = 177 ; free virtual = 7425
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 2468 ; free virtual = 9097
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2403.168 ; gain = 786.438 ; free physical = 177 ; free virtual = 7425
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 2468 ; free virtual = 9097
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2403.168 ; gain = 786.438 ; free physical = 177 ; free virtual = 7425
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 2480 ; free virtual = 9109
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2403.168 ; gain = 786.438 ; free physical = 198 ; free virtual = 7447
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -125,10 +153,14 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   32 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 259   
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 256   
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 8     
+	   2 Input   32 Bit        Muxes := 4     
+	   4 Input    8 Bit        Muxes := 64    
+	   2 Input    8 Bit        Muxes := 1530  
+	   5 Input    8 Bit        Muxes := 88    
+	   5 Input    3 Bit        Muxes := 84    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -145,26 +177,74 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port uart_data_in[31] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[30] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[29] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[28] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[27] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[26] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[25] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[24] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[23] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[22] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[21] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[20] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[19] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[18] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[17] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[16] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[15] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[14] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[13] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[12] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[11] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[10] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[9] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_data_in[8] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[31] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[30] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[29] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[28] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[27] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[26] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[25] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[24] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[23] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[22] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[21] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[20] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[19] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[18] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[17] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[16] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[15] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[14] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[13] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[12] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[11] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[10] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[9] in module Fetch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debugAddress[8] in module Fetch is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 2410 ; free virtual = 9052
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 2403.168 ; gain = 786.438 ; free physical = 139 ; free virtual = 7396
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:11 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 2412 ; free virtual = 9060
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 2403.168 ; gain = 786.438 ; free physical = 139 ; free virtual = 7402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:17 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 2411 ; free virtual = 9060
+Finished Timing Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 2479.117 ; gain = 862.387 ; free physical = 173 ; free virtual = 7337
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 2263 ; free virtual = 8912
+Finished Technology Mapping : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 2479.117 ; gain = 862.387 ; free physical = 179 ; free virtual = 7343
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -182,37 +262,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:28 ; elapsed = 00:01:33 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 2050 ; free virtual = 8699
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 2479.117 ; gain = 862.387 ; free physical = 178 ; free virtual = 7343
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:28 ; elapsed = 00:01:33 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 2049 ; free virtual = 8698
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 2479.117 ; gain = 862.387 ; free physical = 178 ; free virtual = 7343
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:01:35 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 1993 ; free virtual = 8643
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 2479.117 ; gain = 862.387 ; free physical = 178 ; free virtual = 7343
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:01:35 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 1992 ; free virtual = 8642
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 2479.117 ; gain = 862.387 ; free physical = 178 ; free virtual = 7343
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:30 ; elapsed = 00:01:35 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 1991 ; free virtual = 8641
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 2479.117 ; gain = 862.387 ; free physical = 178 ; free virtual = 7343
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:30 ; elapsed = 00:01:35 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 1991 ; free virtual = 8641
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 2479.117 ; gain = 862.387 ; free physical = 178 ; free virtual = 7343
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -231,43 +311,41 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |     8|
 |3     |LUT1   |     2|
-|4     |LUT2   |     3|
-|5     |LUT3   |    74|
-|6     |LUT4   |     6|
-|7     |LUT5   |   159|
-|8     |LUT6   |  2321|
-|9     |MUXF7  |  1088|
-|10    |MUXF8  |   544|
-|11    |FDRE   |  8278|
-|12    |IBUF   |   134|
-|13    |OBUF   |    64|
+|4     |LUT2   |    53|
+|5     |LUT3   |  1040|
+|6     |LUT4   |   428|
+|7     |LUT5   |   734|
+|8     |LUT6   |  4531|
+|9     |MUXF7  |   424|
+|10    |FDRE   |  2112|
+|11    |IBUF   |   119|
+|12    |OBUF   |    64|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:30 ; elapsed = 00:01:35 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 1991 ; free virtual = 8642
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 2479.117 ; gain = 862.387 ; free physical = 178 ; free virtual = 7343
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:25 ; elapsed = 00:01:30 . Memory (MB): peak = 2276.008 ; gain = 517.527 ; free physical = 2027 ; free virtual = 8677
-Synthesis Optimization Complete : Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 2276.008 ; gain = 656.344 ; free physical = 2025 ; free virtual = 8675
+Synthesis finished with 0 errors, 0 critical warnings and 49 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 2479.117 ; gain = 735.570 ; free physical = 178 ; free virtual = 7343
+Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 2479.125 ; gain = 862.387 ; free physical = 178 ; free virtual = 7343
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2276.008 ; gain = 0.000 ; free physical = 2274 ; free virtual = 8924
-INFO: [Netlist 29-17] Analyzing 1640 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2479.125 ; gain = 0.000 ; free physical = 505 ; free virtual = 7673
+INFO: [Netlist 29-17] Analyzing 432 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'Fetch' is not ideal for floorplanning, since the cellview 'instruction_register' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2276.008 ; gain = 0.000 ; free physical = 2240 ; free virtual = 8891
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2511.133 ; gain = 0.000 ; free physical = 505 ; free virtual = 7673
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 32548d62
+Synth Design complete | Checksum: d69e71d0
 INFO: [Common 17-83] Releasing license: Synthesis
-33 Infos, 14 Warnings, 8 Critical Warnings and 0 Errors encountered.
+35 Infos, 87 Warnings, 8 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:52 ; elapsed = 00:01:51 . Memory (MB): peak = 2276.008 ; gain = 965.352 ; free physical = 2258 ; free virtual = 8910
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1836.730; main = 1530.620; forked = 357.457
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3226.562; main = 2275.977; forked = 982.602
+synth_design: Time (s): cpu = 00:01:31 ; elapsed = 00:01:30 . Memory (MB): peak = 2511.168 ; gain = 1195.508 ; free physical = 505 ; free virtual = 7673
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2175.921; main = 1804.426; forked = 421.514
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3505.082; main = 2511.137; forked = 1025.961
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2299.984 ; gain = 0.000 ; free physical = 2256 ; free virtual = 8909
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2535.145 ; gain = 0.000 ; free physical = 505 ; free virtual = 7674
 INFO: [Common 17-1381] The checkpoint '/home/gina/Facultad/Arqui/MIPS/project_1.runs/synth_1/Fetch.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Fetch_utilization_synth.rpt -pb Fetch_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 12 20:46:08 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 15 14:56:16 2024...

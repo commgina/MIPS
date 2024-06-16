@@ -70,10 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3724-uwuntu/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -92,6 +88,7 @@ read_verilog -library xil_defaultlib {
   /home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/IF_ID.v
   /home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/PC.v
   /home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/instruction_register.v
+  /home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/imports/Downloads/mux_adressSource.v
   /home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/next_pc_logic.v
   /home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/pc_adder.v
   /home/gina/Facultad/Arqui/MIPS/project_1.srcs/sources_1/new/Fetch.v
